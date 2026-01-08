@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-gradient-shift: gradient-shift 15s ease;
+  --shadow-glow: 0 0 10px rgba(168, 85, 247, 0.4);
+  --shadow-glow-dark: 0 0 15px rgba(16, 185, 129, 0.6);
+
+  @keyframes gradient-shift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  --animate-showMenu: showMenu 2s ease-in-out;
+  @keyframes showMenu {
+    from {
+      opacity: 0
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .responsive-nav {
+    @apply hover:border-b-2 hover:border-purple-700 hover:-translate-x-4;
+  }
+  .nav-menu-item {
+    @apply hover:border-b-2 hover:border-purple-700 hover:translate-y-1;
+  }
+}
+
+@layer utilities {
+  .shadow-toggle-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .dark .shadow-toggle-glow {
+    box-shadow: var(--shadow-glow-dark);
+  }
+}
