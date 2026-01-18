@@ -11,7 +11,7 @@
 </head>
 
 <body
-  class="box-border bg-linear-to-b from-white from-70% to-purple-400 via-30% min-h-screen relative backdrop-blur-xl animate-gradient-shift dark:bg-black/80"
+  class="box-border bg-linear-to-b from-white from-70% to-purple-400 via-30% min-h-screen relative backdrop-blur-xl animate-gradient-shift dark:bg-black/85"
   id="body">
   <header
     class="bg-white flex justify-between items-center md:px-15 px-6 py-3 rounded-b-lg border-b shadow-purple-900/4 shadow-sm dark:bg-black/80 dark:text-white">
@@ -20,14 +20,12 @@
 
     <nav class="flex gap-3">
       <div>
-        <img class="md:hidden hover:scale-110 h-10" src="src/assets/material-symbols--menu-rounded.png" alt=""
-          width="50px" id="nav-menu-btn">
-        <img class="hidden hover:scale-110 h-10" src="src/assets/material-symbols--close.png" alt="" width="50px"
-          id="nav-close-btn">
+          <i class="bi bi-list md:hidden hover:scale-110 font-extrabold dark:text-white text-4xl" id="nav-menu-btn"></i>
+          <i class="bi bi-x-lg hidden hover:scale-110 font-extrabold dark:text-white text-3xl" id="nav-close-btn"></i>
       </div>
       <ul class="hidden md:flex md:gap-x-8 items-center">
         <a class="nav-menu-item" href="#home">
-          <li>Home</li>
+          <li class="">Home</li>
         </a>
         <a class="nav-menu-item" href="#about">
           <li>About me</li>
@@ -39,7 +37,29 @@
           <li>Contact me</li>
         </a>
         <div
-        class="relative flex items-center w-20 h-10 bg-gray-200 dark:bg-zinc-800/20 rounded-full p-1 cursor-pointer transition-colors duration-500 hover:scale-110 shadow-inner night-mode">
+          class="relative flex items-center w-20 h-10 bg-gray-200 dark:bg-zinc-800/20 rounded-full p-1 cursor-pointer transition-colors duration-500 hover:scale-110 shadow-inner night-mode">
+
+          <div
+            class="absolute w-8 h-8 bg-purple-400 rounded-full shadow-md transform transition-transform duration-500 ease-in-out translate-x-0 mode-slider">
+          </div>
+
+          <div class="relative flex justify-between w-full px-2 z-10 pointer-events-none">
+            <i class="bi bi-brightness-high-fill text-white text-lg transition-opacity duration-300 opacity-100"></i>
+            <i
+              class="bi bi-moon-fill text-gray-400 dark:text-purple-200 text-lg transition-opacity duration-300 opacity-100"></i>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <div
+      class="bg-white dark:top-14 dark:border-0 flex items-end w-75 absolute h-screen right-0 top-16 border-t bg-blend-darken flex-col gap-5 px-6 pt-10 transition-transform duration-300 ease-in-out translate-x-full z-50 dark:bg-black/85 dark:font-bold dark:text-sm"
+      id="responsive-nav">
+      <a class="responsive-nav" href="#home">Home</a>
+      <a class="responsive-nav" href="#about">About me</a>
+      <a class="responsive-nav" href="#projects">Projects</a>
+      <a class="responsive-nav" href="#contact">Contact me</a>
+      <div
+        class="relative flex items-center w-20 h-10 bg-gray-200 dark:bg-gray-200 rounded-full p-1 cursor-pointer transition-colors duration-500 hover:scale-x-110 shadow-inner night-mode mt-5">
 
         <div
           class="absolute w-8 h-8 bg-purple-400 rounded-full shadow-md transform transition-transform duration-500 ease-in-out translate-x-0 mode-slider">
@@ -47,28 +67,6 @@
 
         <div class="relative flex justify-between w-full px-2 z-10 pointer-events-none">
           <i class="bi bi-brightness-high-fill text-white text-lg transition-opacity duration-300 opacity-100"></i>
-          <i
-            class="bi bi-moon-fill text-gray-400 dark:text-purple-200 text-lg transition-opacity duration-300 opacity-100"></i>
-        </div>
-      </div>
-      </ul>
-    </nav>
-    <div
-      class="bg-white flex items-end w-75 absolute h-screen right-0 top-16 border-t bg-blend-darken flex-col gap-5 px-6 pt-10 transition-transform duration-300 ease-in-out translate-x-full z-50 dark:bg-dark"
-      id="responsive-nav">
-      <a class="responsive-nav" href="#home">Home</a>
-      <a class="responsive-nav" href="#about">About me</a>
-      <a class="responsive-nav" href="#projects">Projects</a>
-      <a class="responsive-nav" href="#contact">Contact me</a>
-      <div  class="relative flex items-center w-20 h-10 bg-gray-200 dark:bg-zinc-800 rounded-full p-1 cursor-pointer transition-colors duration-500 hover:scale-110 shadow-inner night-mode">
-
-        <div
-          class="absolute w-8 h-8 bg-purple-400 rounded-full shadow-md transform transition-transform duration-500 ease-in-out translate-x-0 mode-slider">
-        </div>
-
-        <div class="relative flex justify-between w-full px-2 z-10 pointer-events-none">
-          <i
-            class="bi bi-brightness-high-fill text-white text-lg transition-opacity duration-300 opacity-100"></i>
           <i
             class="bi bi-moon-fill text-gray-400 dark:text-purple-200 text-lg transition-opacity duration-300 opacity-100"></i>
         </div>

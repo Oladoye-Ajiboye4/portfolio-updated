@@ -30,7 +30,7 @@
 
 @layer components {
   .responsive-nav {
-    @apply hover:border-b-2 hover:border-purple-700 hover:-translate-x-4;
+    @apply dark:text-white hover:border-b-3 hover:border-purple-400 hover:-translate-x-4;
   }
   .nav-menu-item {
     @apply hover:border-b-2 hover:border-purple-700 hover:translate-y-1;
